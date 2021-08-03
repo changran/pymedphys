@@ -61,7 +61,7 @@
     <link rel="shortcut icon" href="../../_static/pymedphys.svg"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Additional Tips/Tricks" href="../other/index.html" />
+    <link rel="next" title="Windows Setup" href="setup-win.html" />
     <link rel="prev" title="Linux Setup" href="setup-linux.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -82,7 +82,7 @@
 <meta property="og:url" content="https://docs.pymedphys.com/contrib/setups/setup-mac.html" />
 <meta property="og:type" content="article" />
 <meta property="og:title" content="MacOS Setup" />
-<meta property="og:description" content="MacOS Setup  Overview  Install Python 3.7  Install Poetry  Install freetds  Can be done with Homebrew; brew install freetds  Install cython  eg. pip install cyt" />
+<meta property="og:description" content="MacOS Setup  Overview  Install Python 3.8  Install Poetry  Install freetds  Can be done with Homebrew; brew install freetds  Install cython  eg. pip install cyt" />
 
 <meta property="og:image" content="https://docs.pymedphys.com/_static/pymedphys.svg" />
 
@@ -113,181 +113,80 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form>
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-    <p class="caption collapsible-parent">
- <span class="caption-text">
-  App Users Guide
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../app/index.html">
-   Overview
-  </a>
- </li>
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../../app/ref/index.html">
-   Reference
-  </a>
-  <ul class="collapse-ul">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../app/ref/metersetmap.html">
-     MetersetMap Comparison
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../app/ref/pseudonymisation.html">
-     Pseudonymisation
-    </a>
-   </li>
-  </ul>
-  <i class="fas fa-chevron-down">
-  </i>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Library Users Guide
- </span>
-</p>
-<ul class="nav sidenav_l1">
+    <ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="../../lib/index.html">
    Overview
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../lib/tutes/index.html">
-   Tutorials
+  <a class="reference internal" href="../../lib/howto/get-started.html">
+   Get Started
   </a>
  </li>
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../../lib/howto/index.html">
-   How-to Guides
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Reference
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../genindex.html">
+   Alphabetical Index
   </a>
-  <ul class="collapse-ul">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../lib/howto/get-started.html">
-     Get Started
-    </a>
-   </li>
-   <li class="toctree-l2 collapsible-parent">
-    <a class="reference internal" href="../../lib/howto/gamma/index.html">
-     Gamma
-    </a>
-    <ul class="collapse-ul">
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../lib/howto/gamma/effect-of-noise.html">
-       The Effects of Noise on Gamma
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../lib/howto/gamma/from-dicom.html">
-       Gamma from DICOM
-      </a>
-     </li>
-    </ul>
-    <i class="fas fa-chevron-down">
-    </i>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../lib/howto/add-a-linac.html">
-     Adding a Linac
-    </a>
-   </li>
-   <li class="toctree-l2 collapsible-parent">
-    <a class="reference internal" href="../../lib/howto/tunnels/index.html">
-     Tunnels
-    </a>
-    <ul class="collapse-ul">
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../lib/howto/tunnels/samba.html">
-       SAMBA SSH Tunnelling
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../lib/howto/tunnels/rsync.html">
-       Backups using rsync
-      </a>
-     </li>
-    </ul>
-    <i class="fas fa-chevron-down">
-    </i>
-   </li>
-  </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../../lib/ref/index.html">
-   Reference
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../lib/ref/dicom.html">
+   DICOM
   </a>
-  <ul class="collapse-ul">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../genindex.html">
-     Alphabetical Index
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../lib/ref/dicom.html">
-     DICOM
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../lib/ref/gamma.html">
-     Gamma
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../lib/ref/mosaiq.html">
-     Mosaiq
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../lib/ref/metersetmap.html">
-     MetersetMap
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../lib/ref/trf.html">
-     TRF
-    </a>
-   </li>
-   <li class="toctree-l2 collapsible-parent">
-    <a class="reference internal" href="../../lib/ref/experimental/index.html">
-     Experimental Modules
-    </a>
-    <ul class="collapse-ul">
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../lib/ref/experimental/pinnacle.html">
-       Pinnacle Export Tool
-      </a>
-     </li>
-    </ul>
-    <i class="fas fa-chevron-down">
-    </i>
-   </li>
-  </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../../lib/background/index.html">
-   Background
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../lib/ref/gamma.html">
+   Gamma
   </a>
-  <ul class="collapse-ul">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../lib/background/autocontouring.html">
-     Automatic Contouring Project
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../lib/background/elekta-logfiles.html">
-     Elekta Logfile Decoding and Indexing
-    </a>
-   </li>
-  </ul>
-  <i class="fas fa-chevron-down">
-  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../lib/ref/mosaiq.html">
+   Mosaiq
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../lib/ref/metersetmap.html">
+   MetersetMap
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../lib/ref/trf.html">
+   TRF
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../lib/ref/experimental/pinnacle.html">
+   Pinnacle Export Tool
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  How-to
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../lib/howto/gamma/effect-of-noise.html">
+   The Effects of Noise on Gamma
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../lib/howto/gamma/from-dicom.html">
+   Gamma from DICOM
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../lib/howto/add-a-linac.html">
+   Adding a Linac
+  </a>
  </li>
 </ul>
 <p class="caption collapsible-parent">
@@ -301,34 +200,25 @@
    Overview
   </a>
  </li>
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../../cli/ref/index.html">
-   Reference
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../cli/ref/dicom.html">
+   DICOM Files
   </a>
-  <ul class="collapse-ul">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../cli/ref/dicom.html">
-     DICOM Files
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../cli/ref/trf.html">
-     Elekta Binary Logfiles
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../cli/ref/icom.html">
-     iCom listener
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../cli/ref/pinnacle.html">
-     Pinnacle Export Tool
-    </a>
-   </li>
-  </ul>
-  <i class="fas fa-chevron-down">
-  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../cli/ref/trf.html">
+   Elekta Binary Logfiles
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../cli/ref/icom.html">
+   iCom listener
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../cli/ref/pinnacle.html">
+   Pinnacle Export Tool
+  </a>
  </li>
 </ul>
 <p class="caption collapsible-parent">
@@ -343,55 +233,37 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="setup-linux.html">
+   Linux Setup
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   MacOS Setup
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="setup-win.html">
+   Windows Setup
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../documentation.html">
    Writing documentation
   </a>
  </li>
- <li class="toctree-l1 current active collapsible-parent">
-  <a class="reference internal" href="index.html">
-   Recommended Contributor Setups
+ <li class="toctree-l1">
+  <a class="reference internal" href="../other/add-jupyter-kernel.html">
+   Add Jupyter kernel with
+   <em>
+    poetry
+   </em>
   </a>
-  <ul class="current collapse-ul">
-   <li class="toctree-l2">
-    <a class="reference internal" href="setup-win.html">
-     Windows Setup
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="setup-linux.html">
-     Linux Setup
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     MacOS Setup
-    </a>
-   </li>
-  </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../other/index.html">
-   Additional Tips/Tricks
+ <li class="toctree-l1">
+  <a class="reference internal" href="../other/win-open-ssh.html">
+   Setting up OpenSSH on Windows 10
   </a>
-  <ul class="collapse-ul">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../other/add-jupyter-kernel.html">
-     Add Jupyter kernel with
-     <em>
-      poetry
-     </em>
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../other/win-open-ssh.html">
-     Setting up OpenSSH on Windows 10
-    </a>
-   </li>
-  </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
 </ul>
 <p class="caption collapsible-parent">
@@ -418,6 +290,16 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../../general/open-source-benefits.html">
    Benefits of Open Source for Medical Physics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../lib/background/autocontouring.html">
+   Automatic Contouring Project
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../lib/background/elekta-logfiles.html">
+   Elekta Logfile Decoding and Indexing
   </a>
  </li>
 </ul>
@@ -547,7 +429,7 @@
 <div class="section" id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>Install Python 3.7</p></li>
+<li><p>Install Python 3.8</p></li>
 <li><p><a class="reference external" href="https://poetry.eustace.io/docs/#installation">Install Poetry</a></p></li>
 <li><p>Install freetds</p>
 <ul>
@@ -627,7 +509,7 @@
             <div class='prev-next-bottom'>
                 
     <a class='left-prev' id="prev-link" href="setup-linux.html" title="previous page">Linux Setup</a>
-    <a class='right-next' id="next-link" href="../other/index.html" title="next page">Additional Tips/Tricks</a>
+    <a class='right-next' id="next-link" href="setup-win.html" title="next page">Windows Setup</a>
 
             </div>
             
