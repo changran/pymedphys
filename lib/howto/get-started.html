@@ -82,7 +82,7 @@
 <meta property="og:url" content="https://docs.pymedphys.com/lib/howto/get-started.html" />
 <meta property="og:type" content="article" />
 <meta property="og:title" content="Get Started" />
-<meta property="og:description" content="Get Started  Install Python  In order to make use of the PyMedPhys library, you’ll need Python installed on your workstation. On Windows we recommend that you i" />
+<meta property="og:description" content="Get Started  Install Python  In order to make use of the PyMedPhys library, you’ll need Python installed on your workstation. Below are some recommended instruc" />
 
 <meta property="og:image" content="https://docs.pymedphys.com/_static/pymedphys.svg" />
 
@@ -396,6 +396,18 @@
   <a class="reference internal nav-link" href="#install-python">
    Install Python
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#windows-10-or-11">
+     Windows 10 or 11
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#linux-or-macos">
+     Linux or MacOS
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#installing-pymedphys">
@@ -403,16 +415,16 @@
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#a-minimal-installation-advanced-users-only">
-     A minimal installation (Advanced users only)
+    <a class="reference internal nav-link" href="#ssl-issues">
+     SSL Issues
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#proxy-issues">
+     Proxy Issues
     </a>
    </li>
   </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#installing-the-bleeding-edge-version-of-pymedphys-advanced-users-only">
-   Installing the Bleeding Edge version of PyMedPhys (Advanced users only)
-  </a>
  </li>
 
                 <li class="toc-h2 nav-item toc-entry">
@@ -441,17 +453,39 @@
 <div class="section" id="install-python">
 <h2>Install Python<a class="headerlink" href="#install-python" title="Permalink to this headline">¶</a></h2>
 <p>In order to make use of the PyMedPhys library, you’ll need Python installed on
-your workstation. On Windows we recommend that you install the
-Anaconda Python distribution. Download the latest Anaconda
-version from <a class="reference external" href="https://www.anaconda.com/products/individual#Downloads">here</a>.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>When installing Anaconda make sure to install it for your user only, and
-tick the option “add to path”.</p>
+your workstation. Below are some recommended instructions for installing Python
+based upon your OS.</p>
+<div class="section" id="windows-10-or-11">
+<h3>Windows 10 or 11<a class="headerlink" href="#windows-10-or-11" title="Permalink to this headline">¶</a></h3>
+<p>Open up a command prompt and type:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python
+</pre></div>
 </div>
-<img alt="../../_images/add_anaconda_to_path.png" src="../../_images/add_anaconda_to_path.png" />
+<p>If python isn’t already installed this will open the Windows store. At this
+point you can click the “Get” button. It will ask you to sign in, but you can
+skip the sign in step. It will still install.</p>
+<p>Once installed, open a new command prompt and test that it has installed by
+typing:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python --version
+</pre></div>
+</div>
+<p>Windows by default also can’t utilise paths longer than 260 characters. This
+will likely be an issue for installing Python packages. As such follow the
+<a class="reference external" href="https://www.microfocus.com/documentation/filr/filr-4/filr-desktop/t47bx2ogpfz7.html">enable Windows Long Paths guide</a> to enable long paths on your system.</p>
+</div>
+<div class="section" id="linux-or-macos">
+<h3>Linux or MacOS<a class="headerlink" href="#linux-or-macos" title="Permalink to this headline">¶</a></h3>
 <p>On Linux or MacOS we recommend not using your system Python and instead
-managing your Python installation using something like <a class="reference external" href="https://github.com/pyenv/pyenv-installer#install">pyenv</a>.</p>
+managing your Python installation using <a class="reference external" href="https://github.com/pyenv/pyenv/blob/master/README.md">pyenv</a>.</p>
+<p>To achieve this first install <a class="reference external" href="https://github.com/pyenv/pyenv/wiki#suggested-build-environment">the python build environment</a>, and then follow
+the <a class="reference external" href="https://github.com/pyenv/pyenv-installer#install">pyenv installation</a> steps. Once pyenv is installed run the following:</p>
+<div class="highlight-cmd notranslate"><div class="highlight"><pre><span></span>pyenv install 3.9.7
+pyenv global 3.9.7
+</pre></div>
+</div>
+<p>You can choose to adjust the version number provided above to be the latest
+Python version if you wish.</p>
+</div>
 </div>
 <div class="section" id="installing-pymedphys">
 <h2>Installing PyMedPhys<a class="headerlink" href="#installing-pymedphys" title="Permalink to this headline">¶</a></h2>
@@ -460,30 +494,41 @@ following in a terminal or command prompt:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install pymedphys<span class="o">[</span>user<span class="o">]</span>
 </pre></div>
 </div>
+<p>You can copy this command directly into a Windows command prompt.
+You can <code class="docutils literal notranslate"><span class="pre">Right</span> <span class="pre">Click</span></code> to paste.</p>
 <p>You may need to open and close your terminal if you have only just installed
 Python. The <code class="docutils literal notranslate"><span class="pre">[user]</span></code> option is needed to install pymedphys with its
 “batteries included” so-to-speak. It will go and install a range of
 dependencies which you may need during your use of pymedphys.</p>
-<div class="section" id="a-minimal-installation-advanced-users-only">
-<h3>A minimal installation (Advanced users only)<a class="headerlink" href="#a-minimal-installation-advanced-users-only" title="Permalink to this headline">¶</a></h3>
-<p>If you’re not interested in installing PyMedPhys’ dependencies you can choose
-to skip the <code class="docutils literal notranslate"><span class="pre">[user]</span></code> option as so:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install pymedphys
+<div class="section" id="ssl-issues">
+<h3>SSL Issues<a class="headerlink" href="#ssl-issues" title="Permalink to this headline">¶</a></h3>
+<p>Depending on your network set up you may see “SSL” warnings followed by an
+error message when trying to install PyMedPhys with the above command. This may
+be due to your network administrator filtering all packets through its own
+server. Pip by default protects against this as filtering of this sort can
+intercept the packages to be installed and provide you with something else.</p>
+<p>If you trust the network you are on to not be utilising this power maliciously
+then you can run the following to say that you trust your network’s version of
+pypi.org and files.pythonhosted.org:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install --trusted-host pypi.org --trusted-host files.pythonhosted.org pymedphys<span class="o">[</span>user<span class="o">]</span>
 </pre></div>
 </div>
 </div>
+<div class="section" id="proxy-issues">
+<h3>Proxy Issues<a class="headerlink" href="#proxy-issues" title="Permalink to this headline">¶</a></h3>
+<p>It’s common for private networks, especially those in healthcare, to require
+outgoing traffic to be sent through a proxy server to reach any servers on the
+world wide web. If this is the case on your network, you will need to specify
+a proxy server when using pip.</p>
+<p>The following command specifies the proxy server for pip. Ensure you insert
+your username and password used to authenticate on the proxy server, along with
+the host and port of the proxy server. If you are unsure of the host and port
+to use in your environment, reach out to a network administrator to obtain
+these:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install --proxy<span class="o">=</span>http://username:password@host:port --trusted-host pypi.org --trusted-host files.pythonhosted.org pymedphys<span class="o">[</span>user<span class="o">]</span>
+</pre></div>
 </div>
-<div class="section" id="installing-the-bleeding-edge-version-of-pymedphys-advanced-users-only">
-<h2>Installing the Bleeding Edge version of PyMedPhys (Advanced users only)<a class="headerlink" href="#installing-the-bleeding-edge-version-of-pymedphys-advanced-users-only" title="Permalink to this headline">¶</a></h2>
-<p>If you wish to be able to contribute to PyMedPhys itself you are going to want
-to instead install PyMedPhys from the main branch on GitHub
-&lt;<a class="reference external" href="https://github.com/pymedphys/pymedphys">https://github.com/pymedphys/pymedphys</a>&gt;. To achieve this follow the OS
-specific instructions within the contributor tutorials:</p>
-<ul class="simple">
-<li><p><a class="reference internal" href="../../contrib/setups/setup-win.html"><span class="doc">Windows Setup</span></a></p></li>
-<li><p><a class="reference internal" href="../../contrib/setups/setup-linux.html"><span class="doc">Linux Setup</span></a></p></li>
-<li><p><a class="reference internal" href="../../contrib/setups/setup-mac.html"><span class="doc">MacOS Setup</span></a></p></li>
-</ul>
+</div>
 </div>
 </div>
 
